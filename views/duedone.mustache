@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> {{ pageTitle }} </title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+      <form class="" action="/" method="post">
+        <div class="">
+          <input type="text" name="due" value="" placeholder="Provide a task here">
+          <input type="submit" value="Append to List">
+        </div>
+        <h1>{{ listTitle01 }}</h1>
+        {{#due}}
+          <button type="submit" name="done" value="{{.}}">Complete</button>
+          <span> {{.}} </span><br>
+        {{/due}}
+      </form>
+      <!-- <form class="" action="/" method="post"> -->
+        <h1> {{ listTitle02 }} </h1>
+        {{#done}}
+          <!-- <button type="submit" name="forget" value="{{.}}">Forget</button> -->
+          <strike> {{.}} </strike><br>
+        {{/done}}
+      <!-- </form> -->
+      <!-- <h1> {{ listTitle03 }} </h1>
+      {{#forget}}
+        <span hidden> {{.}} </span><br>
+      {{/forget}} -->
+    <!-- </form> -->
+  </body>
+</html>
